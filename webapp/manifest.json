@@ -9,8 +9,17 @@
     },
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
-    "resources": "resources.json",
-    "sourceTemplate": {
+   "resources": "resources.json",
+"dataSources": {
+  "quotationService": {
+    "uri": "/sap/opu/odata4/sap/zui_ebill_adhoc_sales_o4/srvd_a2x/sap/zebill_adhoc_sales_srv/0001/",
+    "type": "OData",
+    "settings": {
+      "odataVersion": "4.0"
+    }
+  }
+},
+"sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.28.0",
       "toolsId": "380d4a89-636d-4ded-abd2-f0f423fb1353"
@@ -46,18 +55,27 @@
       "compact": true,
       "cozy": true
     },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "zo2c_rep043.i18n.i18n"
-        }
-      },
-      "quotationModel": {
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "model/quotationData.json"
-      }
-    },
+"models": {
+  "i18n": {
+    "type": "sap.ui.model.resource.ResourceModel",
+    "settings": {
+      "bundleName": "zo2c_rep043.i18n.i18n"
+    }
+  },
+"quotationModel": {
+  "type": "sap.ui.model.json.JSONModel"
+},
+  "quotationOData": {
+    "dataSource": "quotationService",
+    "preload": true,
+    "settings": {
+      "operationMode": "Server",
+      "synchronizationMode": "None",
+      "autoExpandSelect": true,
+      "earlyRequests": true
+    }
+  }
+},
     "resources": {
       "css": [
         {

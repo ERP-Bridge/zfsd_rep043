@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "4.0"
+
+metadata:
+  name: zo2c_rep043
+
+type: application
+
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: DSE_100_Client
+          url: http://dseci.sap.eu.sodexonet.com:21
+          client: '100'
+        app:
+          name: ZFSD_REP043
+          package: ZFSD_REP043
+          transport: DSEK900885
+        exclude:
+          - /test/
+          - /localService/

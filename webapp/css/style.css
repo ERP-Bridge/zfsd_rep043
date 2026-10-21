@@ -1,123 +1,210 @@
-/* Dark overlay like Figma */
+/* ====================================================== */
+/* REP043 Standard Dialog Design                          */
+/* ====================================================== */
+
 .blackDialogOverlayActive .sapUiBLy {
-    background-color: #000000 !important;
-    opacity: 0.62 !important;
+    background-color: #101820 !important;
+    opacity: 0.56 !important;
+    backdrop-filter: blur(1px);
 }
 
-/* Main popup card */
-.figmaDialog.sapMDialog {
-    border-radius: 0.5rem !important;
+/* Main popup container */
+.rep043Dialog.sapMDialog {
+    border: 1px solid rgba(34, 53, 72, 0.12) !important;
+    border-radius: 0.75rem !important;
     overflow: hidden !important;
-    background-color: #ffffff !important;
-    border: none !important;
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.36) !important;
+    background: #ffffff !important;
+    box-shadow:
+        0 1.25rem 3rem rgba(13, 29, 45, 0.26),
+        0 0.25rem 0.75rem rgba(13, 29, 45, 0.14) !important;
 }
 
-/* Remove ugly outer border */
-.figmaDialog.sapMDialog:focus {
+/* Remove browser-style focus border */
+.rep043Dialog.sapMDialog:focus {
     outline: none !important;
 }
 
-/* Header */
-.figmaDialog .sapMDialogTitleGroup {
-    min-height: 2.65rem !important;
-    height: 2.65rem !important;
-    padding: 0 0.75rem !important;
-    border-bottom: 1px solid #d9dee5 !important;
+/* Dialog header */
+.rep043Dialog .sapMDialogTitleGroup {
+    min-height: 3.5rem !important;
+    padding: 0 1.25rem !important;
     background-color: #ffffff !important;
+    border-bottom: 1px solid #e5e9ed !important;
 }
 
-/* Title text */
-.figmaDialog .sapMDialogTitle {
-    font-size: 0.95rem !important;
+/* Dialog title */
+.rep043Dialog .sapMDialogTitle {
+    color: #1d2d3e !important;
+    font-size: 1.05rem !important;
     font-weight: 700 !important;
-    color: #1d2733 !important;
-    line-height: 2.65rem !important;
+    line-height: 3.5rem !important;
 }
 
-/* Body content */
-.figmaDialog .sapMDialogScrollCont {
+/* Remove default body padding */
+.rep043Dialog .sapMDialogScrollCont {
     padding: 0 !important;
 }
 
-.figmaDialogContent {
-    padding: 0.65rem 0.75rem 0.55rem 0.75rem !important;
+/* Main body row */
+.rep043DialogBody {
+    box-sizing: border-box;
+    gap: 1rem;
+    padding: 1.35rem 1.4rem 1.25rem 1.4rem !important;
     background-color: #ffffff !important;
 }
 
-/* Message text */
-.figmaDialogText {
-    font-size: 0.78rem !important;
-    line-height: 1.35 !important;
-    color: #1d2733 !important;
-    white-space: normal !important;
+/* Dialog icon */
+.rep043DialogIcon {
+    flex: 0 0 auto;
+    margin-top: 0.1rem;
 }
 
-/* Footer */
-.figmaDialog .sapMDialogFooter {
-    height: 2.7rem !important;
-    border-top: 1px solid #d9dee5 !important;
-    background-color: #ffffff !important;
+/* Primary line in dialog */
+.rep043DialogLead {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: #1d2d3e !important;
+    font-size: 0.98rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+}
+
+/* Supporting text */
+.rep043DialogDescription {
+    display: block;
+    color: #475e75 !important;
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+}
+
+/* Dialog footer */
+.rep043Dialog .sapMDialogFooter {
+    min-height: 3.65rem !important;
+    background-color: #f7f9fa !important;
+    border-top: 1px solid #e5e9ed !important;
 }
 
 /* Footer toolbar */
-.figmaDialog .sapMDialogFooter .sapMIBar {
-    height: 2.7rem !important;
-    padding: 0 0.55rem !important;
-    justify-content: flex-end !important;
-    background-color: #ffffff !important;
+.rep043Dialog .sapMDialogFooter .sapMIBar {
+    min-height: 3.65rem !important;
+    padding: 0 1rem !important;
+    background-color: #f7f9fa !important;
 }
 
-/* Button spacing */
-.figmaDialog .sapMBtn {
-    height: 2rem !important;
-    padding: 0 0.15rem !important;
+/* Space buttons consistently */
+.rep043Dialog .sapMDialogFooter .sapMBtn {
+    margin-left: 0.4rem !important;
 }
 
-/* Button inner */
-.figmaDialog .sapMBtnInner {
-    height: 1.75rem !important;
-    min-width: 3.65rem !important;
-    border-radius: 0.35rem !important;
-    font-size: 0.78rem !important;
+/* All dialog buttons */
+.rep043Dialog .sapMBtnInner {
+    min-width: 7rem !important;
+    height: 2.25rem !important;
+    border-radius: 0.45rem !important;
+    font-size: 0.875rem !important;
     font-weight: 600 !important;
-    line-height: 1.65rem !important;
+    line-height: 2.1rem !important;
 }
 
-/* Transparent buttons */
-.figmaDialog .sapMBtnTransparent .sapMBtnInner {
-    color: #0064d9 !important;
-    background-color: transparent !important;
-    border-color: transparent !important;
-}
-
-/* Transparent button hover */
-.figmaDialog .sapMBtnTransparent:hover .sapMBtnInner {
-    background-color: #eef5ff !important;
-    border-color: transparent !important;
-}
-
-/* Blue primary button */
-.figmaDialog .sapMBtnEmphasized .sapMBtnInner {
+/* Primary button */
+.rep043Dialog .sapMBtnEmphasized .sapMBtnInner {
+    color: #ffffff !important;
     background-color: #0a6ed1 !important;
     border-color: #0a6ed1 !important;
-    color: #ffffff !important;
 }
 
-/* Blue primary hover */
-.figmaDialog .sapMBtnEmphasized:hover .sapMBtnInner {
+.rep043Dialog .sapMBtnEmphasized:hover .sapMBtnInner {
     background-color: #085caf !important;
     border-color: #085caf !important;
 }
 
-/* Remove extra outlines around dialog */
-.figmaDialog .sapMDialogSection {
-    background-color: #ffffff !important;
+/* Destructive button */
+.rep043Dialog .sapMBtnReject .sapMBtnInner {
+    color: #ffffff !important;
+    background-color: #bb0000 !important;
+    border-color: #bb0000 !important;
 }
 
-/* Better center and no weird white outline */
-.sapMDialogBlockLayerInit {
-    background-color: #000000 !important;
+.rep043Dialog .sapMBtnReject:hover .sapMBtnInner {
+    background-color: #970000 !important;
+    border-color: #970000 !important;
+}
+
+/* Secondary buttons */
+.rep043Dialog .sapMBtnTransparent .sapMBtnInner {
+    color: #0a6ed1 !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.rep043Dialog .sapMBtnTransparent:hover .sapMBtnInner {
+    background-color: #eaf3fc !important;
+}
+
+/* Confirmation dialog header accent */
+.rep043ConfirmDialog .sapMDialogTitleGroup {
+    border-top: 0.25rem solid #0a6ed1 !important;
+}
+
+/* Discard and warning dialog header accent */
+.rep043DiscardDialog .sapMDialogTitleGroup,
+.rep043UnsavedDialog .sapMDialogTitleGroup {
+    border-top: 0.25rem solid #e9730c !important;
+}
+
+/* ====================================================== */
+/* REP043 Message Boxes                                   */
+/* ====================================================== */
+
+.rep043MessageBox.sapMDialog {
+    border-radius: 0.75rem !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(34, 53, 72, 0.12) !important;
+    box-shadow:
+        0 1.25rem 3rem rgba(13, 29, 45, 0.26),
+        0 0.25rem 0.75rem rgba(13, 29, 45, 0.14) !important;
+}
+
+.rep043MessageBox .sapMDialogTitleGroup {
+    min-height: 3.5rem !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e5e9ed !important;
+}
+
+.rep043MessageBox .sapMDialogTitle {
+    color: #1d2d3e !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+}
+
+.rep043MessageBox .sapMMsgBoxText {
+    color: #334a60 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+}
+
+.rep043MessageBox .sapMDialogFooter {
+    background-color: #f7f9fa !important;
+    border-top: 1px solid #e5e9ed !important;
+}
+
+/* ====================================================== */
+/* REP043 Message Toast                                   */
+/* ====================================================== */
+
+.sapMMessageToast {
+    max-width: 28rem !important;
+    padding: 0.8rem 1.15rem !important;
+    border-radius: 0.55rem !important;
+    color: #ffffff !important;
+    background-color: #263746 !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow:
+        0 0.75rem 1.75rem rgba(0, 0, 0, 0.24) !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
 }
 
 /* Sales Order attachment section */

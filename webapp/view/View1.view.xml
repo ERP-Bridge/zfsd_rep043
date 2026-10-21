@@ -49,12 +49,13 @@
                                     id="view1CustomerLabel"
                                     text="Customer" />
 
-                                <ComboBox
-                                    id="view1CustomerComboBox"
-                                    width="100%"
-                                    selectedKey="{customerFilterModel>/selectedCustomerKey}"
-                                    selectionChange=".onCustomerFilterChange"
-                                    items="{customerFilterModel>/customers}">
+<ComboBox
+    id="view1CustomerComboBox"
+    width="100%"
+    selectedKey="{customerFilterModel>/selectedCustomerKey}"
+    placeholder="Select a customer"
+    selectionChange=".onCustomerFilterChange"
+    items="{customerFilterModel>/customers}">
 
                                     <core:Item
                                         key="{customerFilterModel>key}"
@@ -68,10 +69,12 @@
                                 <Label
                                     id="view1SoldToPartyLabel"
                                     text="Sold to party" />
-                                <SearchField
-                                    id="view1SoldToPartySearch"
-                                    width="100%"
-                                    placeholder="Code + name" />
+<SearchField
+    id="view1SoldToPartySearch"
+    width="100%"
+    placeholder="Search customer number or name"
+    liveChange=".onQuotationFilterChange"
+    search=".onQuotationFilterChange" />
                             </VBox>
 
                             <VBox
@@ -104,10 +107,12 @@
                                 <Label
                                     id="view1PoNumberLabel"
                                     text="PO Number" />
-                                <SearchField
-                                    id="view1PoNumberSearch"
-                                    width="100%"
-                                    placeholder="Code + name" />
+                               <SearchField
+    id="view1PoNumberSearch"
+    width="100%"
+    placeholder="Search PO number"
+    liveChange=".onQuotationFilterChange"
+    search=".onQuotationFilterChange" />
                             </VBox>
 
                         </HBox>
@@ -200,24 +205,6 @@
                         </Column>
 
                         <Column
-                            id="view1BilledColumn"
-                            width="90px"
-                            hAlign="Center">
-                            <Text
-                                id="view1BilledColumnText"
-                                text="Billed" />
-                        </Column>
-
-                        <Column
-                            id="view1BilledPercentColumn"
-                            width="95px"
-                            hAlign="Center">
-                            <Text
-                                id="view1BilledPercentColumnText"
-                                text="Billed %" />
-                        </Column>
-
-                        <Column
                             id="view1ApprovalStatusColumn"
                             width="190px">
                             <Text
@@ -278,31 +265,12 @@
                                     textAlign="End"
                                     wrapping="false" />
 
-                                <Text
-                                    id="view1BilledText"
-                                    text="{quotationModel>billed}"
-                                    textAlign="Center"
-                                    wrapping="false" />
-
-                                <Text
-                                    id="view1BilledPercentText"
-                                    text="{quotationModel>billedPercent}"
-                                    textAlign="Center"
-                                    wrapping="false" />
-
-                                <ObjectStatus
-                                    id="view1ApprovalStatusObject"
-                                    text="{quotationModel>approvalStatus}"
-                                    icon="{
-                                        path: 'quotationModel>approvalStatus',
-                                        formatter: '.formatApprovalStatusIcon'
-                                    }"
-                                    state="{
-                                        path: 'quotationModel>approvalStatus',
-                                        formatter: '.formatApprovalStatusState'
-                                    }"
-                                    inverted="true"
-                                    class="approvalStatusBadge" />
+<ObjectStatus
+    id="view1ApprovalStatusObject"
+    text="{quotationModel>approvalStatus}"
+    state="{quotationModel>statusState}"
+    inverted="true"
+    class="approvalStatusBadge" />
 
                                 <Text
                                     id="view1DateText"
