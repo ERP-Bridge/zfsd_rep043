@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="zo2c_rep043.controller.SalesOrder"
+    controllerName="zfsd_rep043.controller.SalesOrder"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:core="sap.ui.core"

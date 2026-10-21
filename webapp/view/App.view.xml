@@ -1,4 +1,4 @@
-<mvc:View controllerName="zo2c_rep043.controller.App"
+<mvc:View controllerName="zfsd_rep043.controller.App"
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">

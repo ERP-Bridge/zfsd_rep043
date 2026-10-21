@@ -14,7 +14,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "zo2c_rep043",
+					name: "zfsd_rep043",
 					async: true
 				},
 				hash: oOptions.hash,

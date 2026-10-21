@@ -8,7 +8,7 @@
 |**Template Used**<br>Basic|
 |**Service Type**<br>None|
 |**Service URL**<br>N/A|
-|**Module Name**<br>zo2c_rep043|
+|**Module Name**<br>zfsd_rep043|
 |**Application Title**<br>Product Identifier|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
@@ -16,7 +16,7 @@
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>True, see https://www.npmjs.com/package/@sap-ux/eslint-plugin-fiori-tools#rules for the eslint rules.|
 
-## zo2c_rep043
+## zfsd_rep043
 
 An SAP Fiori application.
 

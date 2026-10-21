@@ -15,7 +15,7 @@ sap.ui.define([
 ) {
     "use strict";
 
-    return Controller.extend("zo2c_rep043.controller.View1", {
+    return Controller.extend("zfsd_rep043.controller.View1", {
 onInit: function () {
     /*
      * quotationModel must always start empty.

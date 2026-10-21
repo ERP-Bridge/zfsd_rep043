@@ -2,7 +2,7 @@
 
 specVersion: "4.0"
 metadata:
-  name: zo2c_rep043
+  name: zfsd_rep043
 type: application
 framework:
   name: SAPUI5

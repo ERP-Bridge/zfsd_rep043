@@ -1,10 +1,10 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "zo2c_rep043/model/models"
+    "zfsd_rep043/model/models"
 ], (UIComponent, models) => {
     "use strict";
 
-    return UIComponent.extend("zo2c_rep043.Component", {
+    return UIComponent.extend("zfsd_rep043.Component", {
         metadata: {
             manifest: "json",
             interfaces: [

@@ -27,7 +27,7 @@ sap.ui.define([
 ) {
     "use strict";
 
-    return Controller.extend("zo2c_rep043.controller.SalesOrder", {
+    return Controller.extend("zfsd_rep043.controller.SalesOrder", {
         onInit: function () {
             this._bSalesOrderSaved = false;
             this._bSalesOrderDraftSaved = false;

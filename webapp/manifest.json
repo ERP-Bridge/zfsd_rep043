@@ -1,7 +1,7 @@
 {
   "_version": "1.86.0",
   "sap.app": {
-    "id": "zo2c_rep043",
+    "id": "zfsd_rep043",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -59,7 +59,7 @@
   "i18n": {
     "type": "sap.ui.model.resource.ResourceModel",
     "settings": {
-      "bundleName": "zo2c_rep043.i18n.i18n"
+      "bundleName": "zfsd_rep043.i18n.i18n"
     }
   },
 "quotationModel": {
@@ -91,9 +91,9 @@
         "transition": "slide",
         "type": "View",
         "viewType": "XML",
-        "path": "zo2c_rep043.view",
+        "path": "zfsd_rep043.view",
         "async": true,
-        "viewPath": "zo2c_rep043.view"
+        "viewPath": "zfsd_rep043.view"
       },
       "routes": [
         {
@@ -121,7 +121,7 @@
       }
     },
     "rootView": {
-      "viewName": "zo2c_rep043.view.App",
+      "viewName": "zfsd_rep043.view.App",
       "type": "XML",
       "id": "App",
       "async": true
